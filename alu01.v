@@ -18,10 +18,12 @@ begin
     4'b1010: if (a>b) begin
         alu_out = a;
     end else begin alu_out = b; end
+    4'b1011: if (a>=b) begin
+        alu_out = b;
+    end else begin alu_out = a; end 
     default: alu_out = 0;
     endcase
 end
 endmodule
-
 
 
